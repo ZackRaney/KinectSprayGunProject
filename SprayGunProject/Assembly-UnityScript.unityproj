@@ -47,7 +47,7 @@
      <Compile Include="Assets\KinectStuff\BoxScript.js" />
      <Compile Include="Assets\KinectStuff\KinectMenuScript.js" />
      <Compile Include="Assets\KinectStuff\LeftHandScript.js" />
-     <None Include="Assets\003 Drawing Lines\src\BlackLine.shader" />
+     <None Include="Assets\Examples\003 Drawing Lines\src\BlackLine.shader" />
      <None Include="Assets\KinectStuff\NotesForKinect.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
