@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PaintObjectScript.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\KinectStuff\NotesForKinect.txt">
     <Files>
       <File FileName="Assets\Scripts\PaintObjectScript.js" Line="10" Column="1" />
-      <File FileName="Assets\Scripts\TestPaintScript.js" Line="27" Column="25" />
+      <File FileName="Assets\Scripts\TestPaintScript.js" Line="1" Column="1" />
+      <File FileName="Assets\KinectStuff\NotesForKinect.txt" Line="2" Column="69" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
