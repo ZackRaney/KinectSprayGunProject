@@ -5,25 +5,28 @@ var paintGunRadius:int;
 var rayLocYSqu:int;
 var paintGunRadiusSqu:int;
 var addedRadSqu:int;
+var texture:Texture2D;
 var finalPaintLoc:int;
 
-
+var testCounter:int;
 
 function Start () {
-	var texture = new Texture2D(128, 128);
+	texture = new Texture2D(128, 128);	
 	renderer.material.mainTexture = texture;
-	
-    texture.Apply();
+	Paint(60,60);
+    //texture.Apply();
 }
 
 //Function that actually paints the object
 function Paint (rayLocX, rayLocY) {
-	var texture = new Texture2D(128, 128);	
+
 	
 	
-	for(var y : int = rayLocY + paintGunRadius ; y < paintGunRadius; y++){
-		for (var x : int = rayLocX + paintGunRadius ; x < paintGunRadius; x++){
-			texture.SetPixel (x, y, Color.black);
+	for(y = rayLocY + paintGunRadius ; y > rayLocY; y--){
+		for (x = PaintPointFinder(rayLocY) ; x > rayLocX - PaintPointFinder(rayLocY) - PaintPointFinder(rayLocY) ; x--){    //the greater than part needs fixed
+			texture.SetPixel (x, y, Color.black);	
+			testCounter++;
+			//Debug.Log(testCounter);
 		}
 	}
 	texture.Apply();
@@ -36,10 +39,15 @@ function PaintPointFinder(rayLocY){
 	paintGunRadiusSqu = paintGunRadius * paintGunRadius;
 	addedRadSqu = rayLocYSqu + paintGunRadiusSqu;
 	finalPaintLoc = Mathf.Sqrt(addedRadSqu);
-	
+	Debug.Log(finalPaintLoc);
+	return finalPaintLoc;
 }
 
 function OnGUI(){
-	if (GUI.Button(Rect(10,10,50,50),"click"))
-		Paint(10,10);
+	var x:int = 0;
+	if (GUI.Button(Rect(10,10,50,50),"click")){
+		texture.SetPixel (x, 0, Color.black);
+		x++;
+		texture.Apply();
+		}
 }
